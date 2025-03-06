@@ -229,14 +229,26 @@
        <!-- Using Interpolation, Property and event binding-->
         <!--Uc-01 -->
       <h1>{{ title }}</h1>
+
       <!-- Uc-02, 03  -->
       <img [src]="logoUrl" al="BridgeLabz Logo" width="200" (click)="openBridgeLabzSite()" style="cursor: pointer">
       <br>
+
       <!-- Uc-04 -->
       <input type="text" [(ngModel)]="userName" placeholder="Enter your name"/>
       <!-- Display message dynamically -->
       <h2>Hello {{ userName }} from BridgeLabz!</h2>
 
+      <!-- Uc-05 -->
+      <div>
+        <label >Enter your name </label>
+        <input type="text" (input)="onInput($event)" [(ngModel)]="userName" placeholder="userName">
+        <span class="error">{{this.nameError}}</span>
+        </div>
+        
+
+        <p>Your name is {{userName}}</p>
+    
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
