@@ -226,9 +226,16 @@
         </defs>
       </svg>
     
-       <!-- Using Interpolation  -->
+       <!-- Using Interpolation, Property and event binding-->
+        <!--Uc-01 -->
       <h1>{{ title }}</h1>
+      <!-- Uc-02, 03  -->
       <img [src]="logoUrl" al="BridgeLabz Logo" width="200" (click)="openBridgeLabzSite()" style="cursor: pointer">
+      <br>
+      <!-- Uc-04 -->
+      <input type="text" [(ngModel)]="userName" placeholder="Enter your name"/>
+      <!-- Display message dynamically -->
+      <h2>Hello {{ userName }} from BridgeLabz!</h2>
 
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
